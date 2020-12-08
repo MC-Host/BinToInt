@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+
+namespace BianaryToInt
+{
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            //Settings
+            int _bits = 4;
+            //End-Of-Settings
+            //Other
+            int _binaryInputBase = 0;
+
+            string _binaryInput1 = null;
+            string _binaryInput2 = null;
+            string _binaryInput3 = null;
+            string _binaryInput4 = null;
+
+            int _binaryInput1int = 0;
+            int _binaryInput2int = 0;
+            int _binaryInput3int = 0;
+            int _binaryInput4int = 0;
+
+            string _binaryOutput = null;
+
+            int _output = 0;
+
+            Console.WriteLine("Wecome to BinToInt");
+            Console.WriteLine("");
+            Console.WriteLine("How many bits? *HARD SET TO '4' RIGHT NOW BUT I WILL UPDATE LATER*");
+            Console.WriteLine("");
+            Console.WriteLine("What is the 4 Bit string of Binary? *Type 1 at a time like this '1', '0', '0', '1'*");
+            _binaryInput1 = Console.ReadLine();
+            _binaryInput2 = Console.ReadLine();
+            _binaryInput3 = Console.ReadLine();
+            _binaryInput4 = Console.ReadLine();
+            Console.WriteLine("");
+            Console.WriteLine("LOADING");
+            Console.WriteLine("LOADING.");
+            Console.WriteLine("LOADING..");
+            Console.WriteLine("LOADING...");
+            Console.WriteLine("");
+            //CALCULATE
+
+            //Bin1
+            _binaryInput4int = Int32.Parse(_binaryInput4);
+            _binaryInput4int = _binaryInput4int * 1;
+            //Bin2
+            _binaryInput3int = Int32.Parse(_binaryInput3);
+            _binaryInput3int = _binaryInput3int * 2;
+            //Bin3
+            _binaryInput2int = Int32.Parse(_binaryInput2);
+            _binaryInput2int = _binaryInput2int * 4;
+            //Bin4
+            _binaryInput1int = Int32.Parse(_binaryInput1);
+            _binaryInput1int = _binaryInput1int * 8;
+            //BinOutputCompile
+            int _Compile1 = _binaryInput1int + _binaryInput2int;
+            int _Compile2 = _binaryInput3int + _binaryInput4int;
+            int _Compile3 = _Compile1 + _Compile2;
+            _binaryOutput = _Compile3.ToString();
+            //END OF CALCULATE
+            Console.WriteLine("DONE!");
+            Console.WriteLine("The expected output of {"+_binaryInput1+""+_binaryInput2+""+_binaryInput3+""+_binaryInput4+"} is "+ _binaryOutput);
+            Console.ReadLine();
+        }
+    }
+}
